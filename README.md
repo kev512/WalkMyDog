@@ -14,7 +14,7 @@
 - [Description](#description)
 - [Technologies](#technologies)
 - [Setup](#setup)
-- [For Collaborators - implementation of new features](#for-Collaborators-implementation-of-new-features)
+- [For Collaborators - implementation of new features](#for-collaborators---implementation-of-new-features)
 - [Author Info](#author-info)
 
 ---
@@ -53,3 +53,9 @@ To run this project on your local device, install it by following these steps:
                  https://github.com/kev512/WalkMyDog.git
              ```
 > - **Step 4:** Click on the **Clone** button and you are done.
+
+---
+
+## For Collaborators - implementation of new features
+
+To run this project on your local device, install it by following these steps:
