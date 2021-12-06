@@ -76,6 +76,10 @@ Now a new branch has been created on your local computer that you can code on.
 > - To add changes to an existing branch, you must commit them: **VCS > :heavy_check_mark: Commit...**
 > - **Commit Message**: Add a comment that will clearly describe what functionalities have been added by you **> Commit**
 
+To add changes from your local computer to the repository server you must push them:
+
+> - Android Studio: **VCS > Git > Push... > 'branch_name' --> origin : 'branch_name' > Push**
+
 ---
 
 ## Authors Info
