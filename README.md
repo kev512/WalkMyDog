@@ -23,7 +23,7 @@ Project of the mobile app to walk dogs out of your neighborhood.
 
 ## Description
 
-The main assumption of this project is to create an application implementing the business process. The application will be a platform connecting pet owners (dogs) with people who, for a small charge, want to help them in their care and take them for walks.
+The main assumption of this project is to create a mobile app which will implement the business process. The application will be a platform connecting pet owners (dogs) with people who, for a small charge, want to help them in their care and take them for walks.
 
 ---
 
@@ -62,7 +62,7 @@ To run this project on your local device, install it by following these steps:
 
 #### Attention!
 
-On the **master** branch, only fully tested and working components, should be added. Each new feature should be developed on a separate, specially dedicated branch (the name of the branch thematically refers to the added functionality).
+On the **master** branch, should be added only fully tested and working components. Each new feature should be developed on a separate, specially dedicated branch (the name of the branch thematically refers to the added functionality).
 
 #### Adding a new feature
 
@@ -79,6 +79,19 @@ Now a new branch has been created on your local computer that you can code on.
 To add changes from your local computer to the repository server you must push them:
 
 > - Android Studio: **VCS > Git > Push... > 'branch_name' --> origin : 'branch_name' > Push**
+
+To merge the new branch with the **"master"** branch, perform the **"Compare & pull request"** operation. For security reasons, auto-merge is disabled and requires additional approval. Once your changes are approved, the branch will be merged with the master branch and then deleted.
+
+#### Important!
+
+Whenever you return to work on code, you should update your local project. By default, on your computer, you will be switched to the branch you last worked on.
+
+To update a project:
+
+> - Android Studio: on the lower right corner, click on **"your_branch_name" > switch to master > Checkout**
+> - After **master** is checked out, go to: **Git > :arrow_lower_left: Update project... > OK**
+
+After this operation, you will have the latest version of the project. To start working on a new feature, create a new branch.
 
 ---
 
