@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">WalkMyDog</string>
+
+    <!-- titles of nav bottom and mobile nav -->
+    <string name="title_home">Home</string>
+    <string name="title_add_announcement">Add Announcement</string>
+    <string name="title_search">Search</string>
+    <string name="title_messages">Messages</string>
+    <string name="title_profile">Profile</string>
+
 </resources>
