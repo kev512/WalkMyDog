@@ -93,6 +93,25 @@ To update a project:
 
 After this operation, you will have the latest version of the project. To start working on a new feature, create a new branch.
 
+#### :bangbang::bangbang::bangbang: ERROR FIX: This Version of The Android Support Plugin for IntelliJ IDEA /AS Cannot Open This Project :bangbang::bangbang::bangbang:
+
+If android studio cannot open the project properly and the following message is displayed:
+
+```
+This version of the Android Support plugin for IntelliJ IDEA (or Android Studio) cannot open this project, please retry with version XYZ or newer.
+```
+Go to file **build.gradle (Project: WalkMyDog)** > find section **dependencies** and comment line like is shown below
+```
+// classpath 'com.android.tools.build:gradle:7.0.4'
+```
+
+Then you need to check your current Android studio version: At the top menu go to **Help > About**. After that in **Project Structure** Setting, chose from the dropdown appropriate Android Gradle Pugin Version.
+```
+classpath 'com.android.tools.build:gradle:4.1.2'
+```
+
+:fire: Support YT video: https://www.youtube.com/watch?v=LvCF2ar8xDU
+
 ---
 
 ## Authors Info
