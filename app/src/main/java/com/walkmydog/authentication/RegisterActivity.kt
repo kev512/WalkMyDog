@@ -40,51 +40,43 @@ class RegisterActivity : AppCompatActivity() {
 
         fAuth = FirebaseAuth.getInstance()
 
-        //check auth
+        //check authentication
         if(fAuth.currentUser != null){
             startActivity(Intent(applicationContext, MainActivity::class.java))
         }
 
-        mRegisterBtn.setOnClickListener(View.OnClickListener {
-            fun onClick() {
-                val email: String = mEmailRegister.text.toString().trim()
-                val password: String = mPasswordRegister.text.toString().trim()
+        mRegisterBtn.setOnClickListener {
 
-                if (TextUtils.isEmpty(email)) {
-                    mEmailRegister.setError("Email is required !")
-                }
+            val email: String = mEmailRegister.text.toString().trim()
+            val password: String = mPasswordRegister.text.toString().trim()
 
-                if (TextUtils.isEmpty(password)) {
-                    mPasswordRegister.setError("Password is required !")
-                }
-
-                if (password.length < 8) {
-                    mPasswordRegister.setError("Password must be at 8 chars or longer !")
-                }
-
-
-                //register user in Firebase
-                fAuth.createUserWithEmailAndPassword(email, password)
-                    .addOnCompleteListener(OnCompleteListener {
-                        fun onComplete(task: Task<AuthResult>) {
-                            if (task.isSuccessful) {
-                                Toast.makeText(this, "User Created.", Toast.LENGTH_SHORT).show()
-                                startActivity(Intent(applicationContext, MainActivity::class.java))
-                            } else {
-                                Toast.makeText(
-                                    this,
-                                    "Error ! " + task.exception,
-                                    Toast.LENGTH_SHORT
-                                ).show()
-                            }
-                        }
-                    })
+            if (TextUtils.isEmpty(email)) {
+                mEmailRegister.error = "Email is required !"
             }
 
-        })
+            if (TextUtils.isEmpty(password)) {
+                mPasswordRegister.error = "Password is required !"
+            }
 
-        mLoginBtnActivity.setOnClickListener(View.OnClickListener {
+            if (password.length < 8) {
+                mPasswordRegister.error = "Password must be at 8 chars or longer !"
+            }
+
+            //register user in Firebase
+            fAuth.createUserWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this, OnCompleteListener{
+                    if (it.isSuccessful) {
+                        Toast.makeText(this, "User Created.", Toast.LENGTH_SHORT).show()
+                        startActivity(Intent(applicationContext, MainActivity::class.java))
+                    } else {
+                        Toast.makeText(this, "Error ! " + it.exception, Toast.LENGTH_SHORT).show()
+                    }
+
+                })
+        }
+
+        mLoginBtnActivity.setOnClickListener {
             startActivity(Intent(applicationContext, LoginActivity::class.java))
-        })
+        }
     }
 }

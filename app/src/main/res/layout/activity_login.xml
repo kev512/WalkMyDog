@@ -28,6 +28,7 @@
 
     <EditText
         android:id="@+id/editTextEmailLogin"
+        android:hint="Login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
@@ -39,6 +40,7 @@
 
     <EditText
         android:id="@+id/editTextPasswordLogin"
+        android:hint="Password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
