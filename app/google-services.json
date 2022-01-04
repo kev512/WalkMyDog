@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "911950557955",
+    "project_id": "goracepumy123",
+    "storage_bucket": "goracepumy123.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:911950557955:android:d5079eb6945b2fce32af36",
+        "android_client_info": {
+          "package_name": "com.walkmydog"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "911950557955-chi2dr2iagi0ovj936chr0hnc55gsmj0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_TYRd-sRyn60f_I2SoSDc02tX_BVY-2I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "911950557955-chi2dr2iagi0ovj936chr0hnc55gsmj0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
