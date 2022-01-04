@@ -1,7 +1,6 @@
-package com.walkmydog.ui.home;
+package com.walkmydog.ui.home
 
-import androidx.lifecycle.ViewModel;
+import androidx.lifecycle.ViewModel
 
-public class HomeViewModel extends ViewModel {
-    // TODO: Implement the ViewModel
+class HomeViewModel : ViewModel() { // TODO: Implement the ViewModel
 }

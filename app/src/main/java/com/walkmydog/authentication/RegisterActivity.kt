@@ -50,15 +50,15 @@ class RegisterActivity : AppCompatActivity() {
                 val email: String = mEmailRegister.text.toString().trim()
                 val password: String = mPasswordRegister.text.toString().trim()
 
-                if(TextUtils.isEmpty(email)){
+                if (TextUtils.isEmpty(email)) {
                     mEmailRegister.setError("Email is required !")
                 }
 
-                if(TextUtils.isEmpty(password)){
+                if (TextUtils.isEmpty(password)) {
                     mPasswordRegister.setError("Password is required !")
                 }
 
-                if(password.length < 8){
+                if (password.length < 8) {
                     mPasswordRegister.setError("Password must be at 8 chars or longer !")
                 }
 
@@ -66,17 +66,25 @@ class RegisterActivity : AppCompatActivity() {
                 //register user in Firebase
                 fAuth.createUserWithEmailAndPassword(email, password)
                     .addOnCompleteListener(OnCompleteListener {
-                        fun onComplete(task: Task<AuthResult>){
-                            if(task.isSuccessful){
-                               Toast.makeText(this, "User Created.", Toast.LENGTH_SHORT).show()
-                               startActivity(Intent(applicationContext, MainActivity::class.java))
-                            }else {
-                                Toast.makeText(this, "Error ! " + task.exception, Toast.LENGTH_SHORT).show()
+                        fun onComplete(task: Task<AuthResult>) {
+                            if (task.isSuccessful) {
+                                Toast.makeText(this, "User Created.", Toast.LENGTH_SHORT).show()
+                                startActivity(Intent(applicationContext, MainActivity::class.java))
+                            } else {
+                                Toast.makeText(
+                                    this,
+                                    "Error ! " + task.exception,
+                                    Toast.LENGTH_SHORT
+                                ).show()
                             }
                         }
                     })
             }
 
+        })
+
+        mLoginBtnActivity.setOnClickListener(View.OnClickListener {
+            startActivity(Intent(applicationContext, LoginActivity::class.java))
         })
     }
 }

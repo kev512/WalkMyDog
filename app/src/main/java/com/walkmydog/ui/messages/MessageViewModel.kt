@@ -1,7 +1,6 @@
-package com.walkmydog.ui.messages;
+package com.walkmydog.ui.messages
 
-import androidx.lifecycle.ViewModel;
+import androidx.lifecycle.ViewModel
 
-public class MessageViewModel extends ViewModel {
-    // TODO: Implement the ViewModel
+class MessageViewModel : ViewModel() { // TODO: Implement the ViewModel
 }

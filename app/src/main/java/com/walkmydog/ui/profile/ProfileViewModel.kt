@@ -1,7 +1,6 @@
-package com.walkmydog.ui.profile;
+package com.walkmydog.ui.profile
 
-import androidx.lifecycle.ViewModel;
+import androidx.lifecycle.ViewModel
 
-public class ProfileViewModel extends ViewModel {
-    // TODO: Implement the ViewModel
+class ProfileViewModel : ViewModel() { // TODO: Implement the ViewModel
 }

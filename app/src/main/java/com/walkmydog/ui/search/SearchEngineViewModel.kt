@@ -1,7 +1,6 @@
-package com.walkmydog.ui.search;
+package com.walkmydog.ui.search
 
-import androidx.lifecycle.ViewModel;
+import androidx.lifecycle.ViewModel
 
-public class SearchEngineViewModel extends ViewModel {
-    // TODO: Implement the ViewModel
+class SearchEngineViewModel : ViewModel() { // TODO: Implement the ViewModel
 }

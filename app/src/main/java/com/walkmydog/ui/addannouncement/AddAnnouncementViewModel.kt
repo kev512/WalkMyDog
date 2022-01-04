@@ -1,7 +1,6 @@
-package com.walkmydog.ui.addannouncement;
+package com.walkmydog.ui.addannouncement
 
-import androidx.lifecycle.ViewModel;
+import androidx.lifecycle.ViewModel
 
-public class AddAnnouncementViewModel extends ViewModel {
-    // TODO: Implement the ViewModel
+class AddAnnouncementViewModel : ViewModel() { // TODO: Implement the ViewModel
 }
