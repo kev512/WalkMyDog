@@ -26,12 +26,6 @@ class HomeFragment : Fragment() {
     ): View? {
         val rootView: View = inflater.inflate(R.layout.home_fragment, container, false)
 
-        //testing logout button
-        val buttonToLogout: Button = rootView.findViewById(R.id.logoutButton)
-        buttonToLogout.setOnClickListener {
-            FirebaseAuth.getInstance().signOut()
-            startActivity(Intent(this.context?.applicationContext, LoginActivity::class.java))
-        }
 
             return rootView
     }

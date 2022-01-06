@@ -71,7 +71,6 @@ class RegisterActivity : AppCompatActivity() {
                     } else {
                         Toast.makeText(this, "Error ! " + it.exception, Toast.LENGTH_SHORT).show()
                     }
-
                 })
         }
 
