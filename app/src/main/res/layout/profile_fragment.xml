@@ -28,7 +28,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/AddPoochButton"
+        android:id="@+id/AddPoochButtonActivity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
@@ -44,7 +44,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="40dp"
         android:text="Delete Pooch (test button)"
-        app:layout_constraintBottom_toTopOf="@+id/AddPoochButton"
+        app:layout_constraintBottom_toTopOf="@+id/AddPoochButtonActivity"
         app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

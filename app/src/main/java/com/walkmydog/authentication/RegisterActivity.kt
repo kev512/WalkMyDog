@@ -85,9 +85,21 @@ class RegisterActivity : AppCompatActivity() {
                         startActivity(Intent(applicationContext, MainActivity::class.java))
 
                         //save new user to fireStore
-                        val user = User(firstName, null, email, password, null, null,
-                            phoneNumber,null, null, null, null, null,
-                            null)
+                        val user = User(
+                            firstName,
+                            null,
+                            email,
+                            password,
+                            null,
+                            null,
+                            phoneNumber,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null
+                        )
                         saveUser(user)
 
                     } else {

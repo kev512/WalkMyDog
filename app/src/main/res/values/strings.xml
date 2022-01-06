@@ -17,4 +17,18 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
 
+    <!-- pet's behavior questions  -->
+    <string name="question_1">"Question"</string>
+    <string name="question_2">"Question"</string>
+    <string name="question_3">"Question"</string>
+    <string name="question_4">"Question"</string>
+    <string name="question_5">"Question"</string>
+    <string name="question_6">"Question"</string>
+    <string name="question_7">"Question"</string>
+    <string name="question_8">"Question"</string>
+    <string name="question_9">"Question"</string>
+    <string name="question_10">"Question"</string>
+    <string name="question_11">"Question"</string>
+    <string name="question_12">"Question"</string>
+
 </resources>

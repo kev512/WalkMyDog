@@ -42,7 +42,11 @@ class ProfileFragment : Fragment() {
         val UserId: String = fAuth.currentUser!!.uid
         textBox.setText(UserId)
 
-
+        //Add pooch button
+        val addPoochActivity: Button = rootView.findViewById(R.id.AddPoochButtonActivity)
+        addPoochActivity.setOnClickListener {
+            startActivity(Intent(context, AddPoochActivity::class.java))
+        }
 
         return rootView
     }
