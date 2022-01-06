@@ -1,6 +1,6 @@
 package com.walkmydog.data
 
-data class DogInfo (
+data class Dog (
     val userId: String,
     val name: String,
     val age: Int,

@@ -38,5 +38,10 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+        //check authentication
+        if(FirebaseAuth.getInstance().currentUser == null){
+            startActivity(Intent(applicationContext, LoginActivity::class.java))
+        }
     }
 }
