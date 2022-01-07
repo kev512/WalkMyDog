@@ -21,30 +21,41 @@
         android:id="@+id/logoutButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:layout_marginBottom="60dp"
-        android:text="Logout (test button)"
+        android:text="Sign out"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/AddPoochButtonActivity"
+        android:id="@+id/AddPoochBtnActivity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="40dp"
-        android:text="Add Pooch (test button)"
-        app:layout_constraintBottom_toTopOf="@+id/logoutButton"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:layout_marginBottom="16dp"
+        android:text="Add new dog"
+        app:layout_constraintBottom_toTopOf="@+id/changePasswordBtnActivity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/DeletePoochButton"
+        android:id="@+id/changePasswordBtnActivity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="40dp"
-        android:text="Delete Pooch (test button)"
-        app:layout_constraintBottom_toTopOf="@+id/AddPoochButtonActivity"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:layout_marginBottom="16dp"
+        android:text="Change password"
+        app:layout_constraintBottom_toTopOf="@+id/logoutButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/changePersonalDataBtnActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Personal data"
+        app:layout_constraintBottom_toTopOf="@+id/AddPoochBtnActivity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

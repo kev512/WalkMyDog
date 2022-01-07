@@ -1,7 +1,6 @@
 package com.walkmydog.ui.profile
 
 import android.content.Intent
-import com.walkmydog.ui.profile.ProfileViewModel
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.os.Bundle
@@ -11,10 +10,9 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.walkmydog.R
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.fragment.findNavController
 import com.google.firebase.auth.FirebaseAuth
 import com.walkmydog.authentication.LoginActivity
-import com.walkmydog.ui.profile.ProfileFragment
+import com.walkmydog.ui.profile.addpooch.AddPoochActivity
 
 class ProfileFragment : Fragment() {
 
@@ -30,7 +28,7 @@ class ProfileFragment : Fragment() {
 
         fAuth = FirebaseAuth.getInstance()
 
-        //testing logout button
+        //Logout button
         val buttonToLogout: Button = rootView.findViewById(R.id.logoutButton)
         buttonToLogout.setOnClickListener {
             FirebaseAuth.getInstance().signOut()
@@ -43,7 +41,7 @@ class ProfileFragment : Fragment() {
         textBox.setText(UserId)
 
         //Add pooch button
-        val addPoochActivity: Button = rootView.findViewById(R.id.AddPoochButtonActivity)
+        val addPoochActivity: Button = rootView.findViewById(R.id.AddPoochBtnActivity)
         addPoochActivity.setOnClickListener {
             startActivity(Intent(context, AddPoochActivity::class.java))
         }

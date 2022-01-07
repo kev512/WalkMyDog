@@ -1,4 +1,4 @@
-package com.walkmydog.ui.profile
+package com.walkmydog.ui.profile.addpooch
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -12,7 +12,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.walkmydog.R
 import com.walkmydog.data.Dog
-import com.walkmydog.data.User
+import com.walkmydog.ui.profile.ProfileFragment
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
