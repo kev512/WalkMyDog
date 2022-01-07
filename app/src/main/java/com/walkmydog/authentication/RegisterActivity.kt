@@ -77,6 +77,10 @@ class RegisterActivity : AppCompatActivity() {
                 mPhoneNumberRegister.error = "Phone number is required !"
             }
 
+            if (phoneNumber.toString().length < 9) {
+                mPhoneNumberRegister.error = "Phone number must have 9 chars !"
+            }
+
             //register user in Firebase
             fAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, OnCompleteListener{
