@@ -13,6 +13,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.google.firebase.auth.FirebaseAuth
 import com.walkmydog.authentication.LoginActivity
 import com.walkmydog.ui.profile.addpooch.AddPoochActivity
+import com.walkmydog.ui.profile.changepersonaldata.ChangePersonalDataActivity
 
 class ProfileFragment : Fragment() {
 
@@ -33,6 +34,12 @@ class ProfileFragment : Fragment() {
         buttonToLogout.setOnClickListener {
             FirebaseAuth.getInstance().signOut()
             startActivity(Intent(this.context?.applicationContext, LoginActivity::class.java))
+        }
+
+        //Change personal data btn
+        val changePersonalDataBtn: Button = rootView.findViewById(R.id.changePersonalDataBtnActivity)
+        changePersonalDataBtn.setOnClickListener {
+            startActivity(Intent(context, ChangePersonalDataActivity::class.java))
         }
 
         //testing box
