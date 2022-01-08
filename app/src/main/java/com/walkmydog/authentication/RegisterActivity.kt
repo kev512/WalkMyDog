@@ -88,46 +88,14 @@ class RegisterActivity : AppCompatActivity() {
                         Toast.makeText(this, "User Created.", Toast.LENGTH_SHORT).show()
                         startActivity(Intent(applicationContext, MainActivity::class.java))
 
-                        //save new user to fireStore
-                        val user = User(
-                            firstName,
-                            null,
-                            email,
-                            password,
-                            null,
-                            null,
-                            phoneNumber,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null
-                        )
-                        saveUser(user)
-
                     } else {
                         Toast.makeText(this, "Error ! " + it.exception, Toast.LENGTH_SHORT).show()
                     }
                 })
-
-
-
         }
 
         mLoginBtnActivity.setOnClickListener {
             startActivity(Intent(applicationContext, LoginActivity::class.java))
-        }
-    }
-
-    private fun saveUser(user: User) = CoroutineScope(Dispatchers.IO).launch {
-        try {
-            userCollectionRef.add(user).await()
-            withContext(Dispatchers.Main) {
-                Toast.makeText(this@RegisterActivity, "Successfully save", Toast.LENGTH_SHORT).show()
-            }
-        } catch (e: Exception) {
-            Toast.makeText(this@RegisterActivity, e.message, Toast.LENGTH_SHORT).show()
         }
     }
 }
