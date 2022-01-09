@@ -32,8 +32,6 @@ class ChangePersonalDataActivity : AppCompatActivity() {
     private lateinit var mSaveEditedData: Button
 
     private lateinit var mShowMeUsers: TextView
-    private lateinit var mCurrentUser: User
-
 
     private val userCollectionRef = FirebaseFirestore.getInstance().collection("Users")
     private val fAuth = FirebaseAuth.getInstance().currentUser
@@ -65,8 +63,6 @@ class ChangePersonalDataActivity : AppCompatActivity() {
         mSaveEditedData.setOnClickListener {
 
             getOldUserData()
-
-
 
             val payCard: Long = mPayCard.text.toString().toLong()
             val city: String = mCity.text.toString()

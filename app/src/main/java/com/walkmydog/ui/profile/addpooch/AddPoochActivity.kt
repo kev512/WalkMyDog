@@ -10,8 +10,10 @@ import android.widget.Switch
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.ktx.toObject
 import com.walkmydog.R
 import com.walkmydog.data.Dog
+import com.walkmydog.data.User
 import com.walkmydog.ui.profile.ProfileFragment
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -41,6 +43,7 @@ class AddPoochActivity : AppCompatActivity() {
     private lateinit var mPoochQuestion12: Switch
 
     private val userCollectionRef = FirebaseFirestore.getInstance().collection("Dogs")
+    private val userId: String = FirebaseAuth.getInstance().uid!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -91,6 +94,7 @@ class AddPoochActivity : AppCompatActivity() {
                 mPoochWeight.error = "Pooch weight is required !"
             }
 
+
             val poochAdditionalInfo: String = mPoochAdditionalInfo.text.toString()
             val poochQuestion1: Boolean = mPoochQuestion1.text.toString().toBoolean()
             val poochQuestion2: Boolean = mPoochQuestion2.text.toString().toBoolean()
@@ -105,6 +109,21 @@ class AddPoochActivity : AppCompatActivity() {
             val poochQuestion11: Boolean = mPoochQuestion11.text.toString().toBoolean()
             val poochQuestion12: Boolean = mPoochQuestion12.text.toString().toBoolean()
 
+            var questions = ArrayList<Boolean>()
+
+            questions.add(poochQuestion1)
+            questions.add(poochQuestion2)
+            questions.add(poochQuestion3)
+            questions.add(poochQuestion4)
+            questions.add(poochQuestion5)
+            questions.add(poochQuestion6)
+            questions.add(poochQuestion7)
+            questions.add(poochQuestion8)
+            questions.add(poochQuestion9)
+            questions.add(poochQuestion10)
+            questions.add(poochQuestion11)
+            questions.add(poochQuestion12)
+
 
             //save new dog to fireStore
             var dog = Dog(
@@ -113,18 +132,7 @@ class AddPoochActivity : AppCompatActivity() {
                 poochRace,
                 poochAge,
                 poochWeight,
-                poochQuestion1,
-                poochQuestion2,
-                poochQuestion3,
-                poochQuestion4,
-                poochQuestion5,
-                poochQuestion6,
-                poochQuestion7,
-                poochQuestion8,
-                poochQuestion9,
-                poochQuestion10,
-                poochQuestion11,
-                poochQuestion12,
+                questions,
                 poochAdditionalInfo
             )
             saveDog(dog)
@@ -136,13 +144,17 @@ class AddPoochActivity : AppCompatActivity() {
 
     private fun saveDog(dog: Dog) = CoroutineScope(Dispatchers.IO).launch {
         try {
-            userCollectionRef.add(dog).await()
+            //save with parameters "userId + dogName"
+            userCollectionRef.document(userId + ";" + dog.name).set(dog).await()
             withContext(Dispatchers.Main) {
                 Toast.makeText(this@AddPoochActivity, "Successfully save", Toast.LENGTH_SHORT).show()
-                startActivity(Intent(applicationContext, ProfileFragment::class.java))
+                startActivity(Intent(this@AddPoochActivity, ProfileFragment::class.java))
             }
         } catch (e: Exception) {
-            Toast.makeText(this@AddPoochActivity, e.message, Toast.LENGTH_SHORT).show()
+            withContext(Dispatchers.Main) {
+                Toast.makeText(this@AddPoochActivity, e.message, Toast.LENGTH_SHORT).show()
+            }
+
         }
     }
 }

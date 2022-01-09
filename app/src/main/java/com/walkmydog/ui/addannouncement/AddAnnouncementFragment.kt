@@ -1,5 +1,6 @@
 package com.walkmydog.ui.addannouncement
 
+import android.content.Intent
 import com.walkmydog.ui.addannouncement.AddAnnouncementViewModel
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -8,7 +9,9 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import com.walkmydog.R
 import androidx.lifecycle.ViewModelProvider
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.walkmydog.ui.addannouncement.AddAnnouncementFragment
+import com.walkmydog.ui.addannouncement.addnewannouncement.NewAnnouncementActivity
 
 class AddAnnouncementFragment : Fragment() {
     private var mViewModel: AddAnnouncementViewModel? = null
@@ -16,7 +19,15 @@ class AddAnnouncementFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.add_announcement_fragment, container, false)
+        val rootView: View = inflater.inflate(R.layout.add_announcement_fragment, container, false)
+
+        //create new announcement btn
+        val addNewAnnouncementActivity: FloatingActionButton = rootView.findViewById(R.id.addNewAnnouncementActivityBtn)
+        addNewAnnouncementActivity.setOnClickListener {
+            startActivity(Intent(context, NewAnnouncementActivity::class.java))
+        }
+
+        return rootView
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
