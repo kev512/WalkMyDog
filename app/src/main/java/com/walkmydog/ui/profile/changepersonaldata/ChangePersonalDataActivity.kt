@@ -159,23 +159,11 @@ class ChangePersonalDataActivity : AppCompatActivity() {
     private fun getOldUserData(): Job = CoroutineScope(Dispatchers.IO).launch {
         try {
             val querySnapshot = userCollectionRef.get().await()
-            var users = ArrayList<User>()
-
             for (document in querySnapshot.documents){
                 val user = document.toObject<User>()
                 val userToSaveInList: User = user!!
-                users.add(userToSaveInList)
+                mUsers.add(userToSaveInList)
             }
-
-            withContext(Dispatchers.Main){
-                for (user in users){
-                    if (user.email == fAuth!!.email) {
-
-                        mShowMeUsers.text = user.toString()
-                    }
-                }
-            }
-
 
         } catch (e: Exception){
             withContext(Dispatchers.Main){

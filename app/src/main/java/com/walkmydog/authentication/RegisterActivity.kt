@@ -31,7 +31,6 @@ class RegisterActivity : AppCompatActivity() {
    private lateinit var mRegisterBtn: Button
 
    private val fAuth: FirebaseAuth = FirebaseAuth.getInstance()
-   private val userCollectionRef = FirebaseFirestore.getInstance().collection("Users")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

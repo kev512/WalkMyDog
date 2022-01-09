@@ -19,6 +19,7 @@ import com.squareup.okhttp.Dispatcher
 import com.walkmydog.authentication.LoginActivity
 import com.walkmydog.data.User
 import com.walkmydog.ui.profile.addpooch.AddPoochActivity
+import com.walkmydog.ui.profile.changepassword.ChangePasswordActivity
 import com.walkmydog.ui.profile.changepersonaldata.ChangePersonalDataActivity
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -53,6 +54,12 @@ class ProfileFragment : Fragment() {
         val changePersonalDataBtn: Button = rootView.findViewById(R.id.changePersonalDataBtnActivity)
         changePersonalDataBtn.setOnClickListener {
             startActivity(Intent(context, ChangePersonalDataActivity::class.java))
+        }
+
+        //change password activity
+        val changePasswordActivityBtn: Button = rootView.findViewById(R.id.changePasswordBtnActivity)
+        changePasswordActivityBtn.setOnClickListener {
+            startActivity(Intent(context, ChangePasswordActivity::class.java))
         }
 
         //testing box

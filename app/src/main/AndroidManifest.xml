@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WalkMyDog">
         <activity
+            android:name=".ui.profile.changepassword.ChangePasswordActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.profile.changepersonaldata.ChangePersonalDataActivity"
             android:exported="false" />
         <activity
