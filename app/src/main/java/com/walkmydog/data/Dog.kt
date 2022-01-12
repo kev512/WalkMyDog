@@ -6,6 +6,6 @@ data class Dog (
     val race: String = "",
     val age: Int = -1,
     val weight: Float = (-1).toFloat(),
-    val petBehaviorQuestions: ArrayList<Boolean> = ArrayList(),
+    val questions: ArrayList<Boolean> = ArrayList(),
     val AdditionalInfo: String? = ""
 )

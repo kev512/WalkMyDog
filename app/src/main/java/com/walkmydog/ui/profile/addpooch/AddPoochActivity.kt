@@ -96,18 +96,18 @@ class AddPoochActivity : AppCompatActivity() {
 
 
             val poochAdditionalInfo: String = mPoochAdditionalInfo.text.toString()
-            val poochQuestion1: Boolean = mPoochQuestion1.text.toString().toBoolean()
-            val poochQuestion2: Boolean = mPoochQuestion2.text.toString().toBoolean()
-            val poochQuestion3: Boolean = mPoochQuestion3.text.toString().toBoolean()
-            val poochQuestion4: Boolean = mPoochQuestion4.text.toString().toBoolean()
-            val poochQuestion5: Boolean = mPoochQuestion5.text.toString().toBoolean()
-            val poochQuestion6: Boolean = mPoochQuestion6.text.toString().toBoolean()
-            val poochQuestion7: Boolean = mPoochQuestion7.text.toString().toBoolean()
-            val poochQuestion8: Boolean = mPoochQuestion8.text.toString().toBoolean()
-            val poochQuestion9: Boolean = mPoochQuestion9.text.toString().toBoolean()
-            val poochQuestion10: Boolean = mPoochQuestion10.text.toString().toBoolean()
-            val poochQuestion11: Boolean = mPoochQuestion11.text.toString().toBoolean()
-            val poochQuestion12: Boolean = mPoochQuestion12.text.toString().toBoolean()
+            val poochQuestion1: Boolean = mPoochQuestion1.isChecked
+            val poochQuestion2: Boolean = mPoochQuestion2.isChecked
+            val poochQuestion3: Boolean = mPoochQuestion3.isChecked
+            val poochQuestion4: Boolean = mPoochQuestion4.isChecked
+            val poochQuestion5: Boolean = mPoochQuestion5.isChecked
+            val poochQuestion6: Boolean = mPoochQuestion6.isChecked
+            val poochQuestion7: Boolean = mPoochQuestion7.isChecked
+            val poochQuestion8: Boolean = mPoochQuestion8.isChecked
+            val poochQuestion9: Boolean = mPoochQuestion9.isChecked
+            val poochQuestion10: Boolean = mPoochQuestion10.isChecked
+            val poochQuestion11: Boolean = mPoochQuestion11.isChecked
+            val poochQuestion12: Boolean = mPoochQuestion12.isChecked
 
             var questions = ArrayList<Boolean>()
 

@@ -4,21 +4,16 @@ package com.walkmydog.ui.addannouncement.addnewannouncement
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.SystemClock
+import android.text.TextUtils
 import android.widget.*
-import androidx.core.view.get
-import androidx.lifecycle.MutableLiveData
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.ktx.firestore
-import com.google.firebase.firestore.ktx.toObject
 import com.google.firebase.ktx.Firebase
-import com.google.type.DateTime
 import com.walkmydog.R
 import com.walkmydog.data.Announcement
 import com.walkmydog.data.Dog
 import com.walkmydog.data.User
 import com.walkmydog.ui.addannouncement.AddAnnouncementFragment
-import com.walkmydog.ui.profile.ProfileFragment
 import kotlinx.coroutines.*
 import kotlinx.coroutines.tasks.await
 import java.util.*
@@ -61,6 +56,14 @@ class NewAnnouncementActivity : AppCompatActivity() {
             val additionalInfo: String = mAdditionalInfo.text.toString()
 
 
+            if (TextUtils.isEmpty(dogName)) {
+                mDogName.error = "Dog name is required !"
+            }
+
+            if (TextUtils.isEmpty(walkInMin.toString())) {
+                mWalkInMin.error = "Field is required !"
+            }
+
             db.collection("Users").document(userAuth.currentUser?.uid.toString()).get()
                 .addOnCompleteListener {
                     val user = it.result.toObject(User::class.java)
@@ -77,20 +80,21 @@ class NewAnnouncementActivity : AppCompatActivity() {
                                 val newAnnouncement = Announcement(
                                     userId,
                                     dogId,
-                                    user,
-                                    dog,
+                                    user!!,
+                                    dog!!,
                                     walkInMin,
                                     additionalInfo
                                 )
-                                saveAnnouncement(dog!!, newAnnouncement)
+                                saveAnnouncement(dog, newAnnouncement)
                             }
                         }
                         .addOnFailureListener {
-                            mShowMeThings.text = "Something get wrong (dogs)"
+                            Toast.makeText(applicationContext, "Dog with this name doesn't exists", Toast.LENGTH_SHORT).show()
+
                         }
                 }
                 .addOnFailureListener {
-                    mShowMeThings.text = "Something get wrong (users)"
+                    Toast.makeText(applicationContext, "User with this name doesn't exists", Toast.LENGTH_SHORT).show()
                 }
 
         }
