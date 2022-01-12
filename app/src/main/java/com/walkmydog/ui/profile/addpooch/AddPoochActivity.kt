@@ -42,7 +42,7 @@ class AddPoochActivity : AppCompatActivity() {
     private lateinit var mPoochQuestion11: Switch
     private lateinit var mPoochQuestion12: Switch
 
-    private val userCollectionRef = FirebaseFirestore.getInstance().collection("Dogs")
+    private val dogsCollectionRef = FirebaseFirestore.getInstance().collection("Dogs")
     private val userId: String = FirebaseAuth.getInstance().uid!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -145,7 +145,8 @@ class AddPoochActivity : AppCompatActivity() {
     private fun saveDog(dog: Dog) = CoroutineScope(Dispatchers.IO).launch {
         try {
             //save with parameters "userId + dogName"
-            userCollectionRef.document(userId + ";" + dog.name).set(dog).await()
+            dogsCollectionRef.document(userId + ";" + dog.name).set(dog).await()
+
             withContext(Dispatchers.Main) {
                 Toast.makeText(this@AddPoochActivity, "Successfully save", Toast.LENGTH_SHORT).show()
                 startActivity(Intent(this@AddPoochActivity, ProfileFragment::class.java))
