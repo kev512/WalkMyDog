@@ -75,7 +75,7 @@ class ChangePersonalDataActivity : AppCompatActivity() {
             val phoneNumber: Int = mPhoneNumber.text.toString().toInt()
 
             val gender = if (mGender.text.toString().toLowerCase() == "mężczyzna" ||
-                mGender.text.toString().toLowerCase() == "męzczyzna" ||
+                mGender.text.toString().toLowerCase() == "meszczyzna" ||
                 mGender.text.toString().toLowerCase() == "meżczyzna" ||
                 mGender.text.toString().toLowerCase() == "men") {
 
