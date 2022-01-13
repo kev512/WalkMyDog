@@ -12,12 +12,12 @@ import com.google.firebase.ktx.Firebase
 import com.walkmydog.R
 import com.walkmydog.data.Announcement
 import com.walkmydog.data.Dog
+import com.walkmydog.data.QuestionsData
 import com.walkmydog.data.User
 import com.walkmydog.ui.addannouncement.AddAnnouncementFragment
 import kotlinx.coroutines.*
 import kotlinx.coroutines.tasks.await
-import java.util.*
-import java.util.function.Function
+
 
 class NewAnnouncementActivity : AppCompatActivity() {
 
@@ -45,6 +45,7 @@ class NewAnnouncementActivity : AppCompatActivity() {
 
         mShowMeThings = findViewById(R.id.boxToThings)
         mShowMeThings2 = findViewById(R.id.boxToThings2)
+
 
 
         var user = User()
@@ -90,7 +91,6 @@ class NewAnnouncementActivity : AppCompatActivity() {
                         }
                         .addOnFailureListener {
                             Toast.makeText(applicationContext, "Dog with this name doesn't exists", Toast.LENGTH_SHORT).show()
-
                         }
                 }
                 .addOnFailureListener {
