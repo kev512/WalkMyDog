@@ -10,6 +10,7 @@
 
     <color name="background_light">#FFFFFFFF</color>
     <color name="background_dark">#F6F6F6</color>
+    <color name="dark_blue2">#3B5999</color>
     <color name="main_blue">#478AD8</color>
     <color name="main_blue_secondary">#419AD6</color>
     <color name="dark_blue">#3F3D56</color>

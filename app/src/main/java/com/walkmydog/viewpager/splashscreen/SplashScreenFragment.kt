@@ -15,6 +15,7 @@ import com.walkmydog.authentication.LoginActivity
 import com.walkmydog.authentication.LoginMethod
 import com.walkmydog.databinding.ActivityMain2Binding
 import com.walkmydog.databinding.ActivityMainBinding
+import kotlinx.android.synthetic.main.fragment_third_screen.*
 
 
 class SplashScreenFragment : Fragment() {
@@ -27,10 +28,13 @@ class SplashScreenFragment : Fragment() {
                 val intent = Intent (getActivity(), LoginMethod::class.java)
                 getActivity()?.startActivity(intent)
             }
+
             else {
                 findNavController().navigate(R.id.action_splashScreenFragment_to_viewPagerFragment)
             }
+
         }, 3000)
+
 
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_splash_screen, container, false)
