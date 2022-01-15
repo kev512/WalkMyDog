@@ -13,6 +13,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WalkMyDog">
         <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".authentication.LoginMethod"
+            android:exported="false"
+            android:theme="@style/Theme.WalkMyDog.NoActionBar" />
+        <activity
             android:name=".ui.addannouncement.addnewannouncement.NewAnnouncementActivity"
             android:exported="false" />
         <activity
@@ -31,7 +38,7 @@
             android:name=".authentication.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".MainActivity2"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
