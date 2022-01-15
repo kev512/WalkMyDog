@@ -22,5 +22,25 @@
     <string name="question_10">"Question"</string>
     <string name="question_11">"Question"</string>
     <string name="question_12">"Question"</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
 
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <!--pager fragment strings-->
+    <string name="pagerFragmentTitle1">Walks for your dog</string>
+    <string name="pagerDesc1">Don\'t have time for a morning walk with your dog? Add an ad in the app, and let someone else do it for you!</string>
+    <string name="pagerFragmentTitle2">Ads from your neighborhood</string>
+    <string name="pagerDesc2">Browse classifieds ads near you and earn quick and easy money walking your neighbours\' dogs!</string>
+    <string name="pagerFragmentTitle3">Plan ahead and do not worry</string>
+    <string name="pagerDesc3">You can plan a through walk for your pet a few days in advance and take care of more importan things</string>
+    <string name="pagerNEXT">NEXT</string>
+    <string name="pagerBACK">BACK</string>
 </resources>
