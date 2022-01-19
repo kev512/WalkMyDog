@@ -24,6 +24,7 @@
 
     <TextView
         android:id="@+id/pagerDesc1"
+        android:textColor="@color/dark_blue"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:textSize="20sp"
@@ -49,13 +50,17 @@
 
     <TextView
         android:id="@+id/nextPager"
+        android:width="53dp"
+        android:height="53dp"
+        android:gravity="center"
+        android:background="@drawable/onboarding_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="30dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="30dp"
         android:text="@string/pagerNEXT"
-        android:textColor="#419AD6"
-        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:textSize="13sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
