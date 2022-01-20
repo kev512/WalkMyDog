@@ -151,7 +151,7 @@
                 app:startIconDrawable="@drawable/ic_baseline_scale_24">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editPhoneNumber"
+                    android:id="@+id/poochWeight"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:inputType="numberDecimal" />
@@ -188,63 +188,15 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-            <EditText
-                android:id="@+id/poochName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="660dp"
-                android:ems="10"
-                android:hint="Name"
-                android:inputType="textPersonName"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <EditText
-                android:id="@+id/poochAge"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:ems="10"
-                android:hint="Age"
-                android:inputType="numberDecimal"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/poochName" />
-
-            <EditText
-                android:id="@+id/poochRace"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:ems="10"
-                android:hint="Race"
-                android:inputType="textPersonName"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/poochAge" />
-
-            <EditText
-                android:id="@+id/poochWeight"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:ems="10"
-                android:hint="Weight"
-                android:inputType="number"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/poochRace" />
-
             <Switch
                 android:id="@+id/switch1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="12dp"
                 android:text="@string/question_1"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/poochWeight" />
+                app:layout_constraintTop_toTopOf="@+id/switch8" />
 
             <Switch
                 android:id="@+id/switch2"
