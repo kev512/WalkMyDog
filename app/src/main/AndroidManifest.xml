@@ -44,16 +44,19 @@
             android:exported="false" />
         <activity
             android:name=".ui.profile.changepersonaldata.ChangePersonalDataActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.WalkMyDog.NoActionBar"/>
         <activity
             android:name=".ui.profile.addpooch.AddPoochActivity"
             android:exported="false" />
         <activity
             android:name=".authentication.RegisterActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.WalkMyDog.NoActionBar"/>
         <activity
             android:name=".authentication.LoginActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.WalkMyDog.NoActionBar"/>
         <activity
             android:name=".MainActivity2"
             android:exported="true">

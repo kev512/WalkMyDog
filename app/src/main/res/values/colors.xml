@@ -15,8 +15,11 @@
     <color name="main_blue_secondary">#419AD6</color>
     <color name="dark_blue">#3F3D56</color>
     <color name="pink">#FF6584</color>
+    <color name="grey_background">#F6F6F6</color>
 
     <color name="trans">#00000000 </color>
+
+    <color name="facebook">#3B5999</color>
 
     <color name="test">#f8f8f8</color>
     

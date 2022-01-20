@@ -37,5 +37,6 @@
         android:id="@+id/loginMethod"
         android:name="com.walkmydog.authentication.LoginMethod"
         android:label="activity_login_method"
-        tools:layout="@layout/activity_login_method" />
+        tools:layout="@layout/activity_login_method" >
+    </activity>
 </navigation>

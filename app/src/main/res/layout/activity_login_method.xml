@@ -32,6 +32,7 @@
             android:id="@+id/textSign"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+
             android:layout_marginTop="39dp"
             android:gravity="center"
             android:text="Sign In"
@@ -59,6 +60,7 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginStart="32dp"
+
             android:layout_marginTop="35dp"
             android:layout_marginEnd="32dp"
             android:background="@drawable/button_blue"
@@ -103,6 +105,9 @@
             android:drawableLeft="@drawable/ic_google__g__logo"
             android:textColor="@color/black"
             android:textSize="16dp"
+            android:paddingLeft="30dip"
+            android:paddingRight="40dip"
+            android:singleLine="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/buttonFacebookLogin" />
@@ -112,28 +117,28 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="18dp"
+            android:layout_marginBottom="20dp"
             android:paddingVertical="5.5dp"
             android:text="Don’t have an account yet?"
             android:textColor="@color/black"
             android:textSize="16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/googleSignIn" />
-
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/textViewCreateAccount"
             android:layout_width="wrap_content"
             android:layout_height="33dp"
-            android:layout_marginTop="18dp"
             android:layout_marginEnd="32dp"
+            android:layout_marginBottom="20dp"
             android:background="@color/trans"
             android:text="Register now!"
+            android:textAllCaps="false"
             android:textColor="@color/pink"
             android:textSize="16dp"
-            android:textAllCaps="false"
             android:textStyle="normal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/googleSignIn" />
+
 
 
 
