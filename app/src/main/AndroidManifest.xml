@@ -48,7 +48,8 @@
             android:theme="@style/Theme.WalkMyDog.NoActionBar"/>
         <activity
             android:name=".ui.profile.addpooch.AddPoochActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.WalkMyDog.NoActionBar" />
         <activity
             android:name=".authentication.RegisterActivity"
             android:exported="false"

@@ -10,18 +10,18 @@
     <string name="title_activity_login">LoginActivity</string>
 
     <!-- pet's behavior questions  -->
-    <string name="question_1">"Question"</string>
-    <string name="question_2">"Question"</string>
-    <string name="question_3">"Question"</string>
-    <string name="question_4">"Question"</string>
-    <string name="question_5">"Question"</string>
-    <string name="question_6">"Question"</string>
-    <string name="question_7">"Question"</string>
-    <string name="question_8">"Question"</string>
-    <string name="question_9">"Question"</string>
-    <string name="question_10">"Question"</string>
-    <string name="question_11">"Question"</string>
-    <string name="question_12">"Question"</string>
+    <string name="question_1">Is leash trained?</string>
+    <string name="question_2">Pulls on the leash?</string>
+    <string name="question_3">Doesnt like interacting with other dogs/people?</string>
+    <string name="question_4">Jumps up on people and things?</string>
+    <string name="question_5">Scared of traffic/loud noises?</string>
+    <string name="question_6">Tries to eat things?</string>
+    <string name="question_7">Digs in the dirt?</string>
+    <string name="question_8">Chases smaller animals (Cats, Birds, etc)?</string>
+    <string name="question_9">Tries to rush out for walk/play time?</string>
+    <string name="question_10">Pees from excitement?</string>
+    <string name="question_11">Shy at first, but eventually warms up</string>
+    <string name="question_12">Protective of my home(may bark and snarl)</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_main2">MainActivity2</string>
