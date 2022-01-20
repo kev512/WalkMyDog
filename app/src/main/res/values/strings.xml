@@ -43,4 +43,10 @@
     <string name="pagerDesc3">You can plan a through walk for your pet a few days in advance and take care of more importan things</string>
     <string name="pagerNEXT">NEXT</string>
     <string name="pagerBACK">BACK</string>
+    
+    <string-array name="edit_gender">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
 </resources>
