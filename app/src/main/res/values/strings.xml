@@ -43,10 +43,23 @@
     <string name="pagerDesc3">You can plan a through walk for your pet a few days in advance and take care of more importan things</string>
     <string name="pagerNEXT">NEXT</string>
     <string name="pagerBACK">BACK</string>
+
+    <string name="sign_in_with_google">Sign in with Google</string>
+    <string name="facebook">Facebook</string>
+    <string name="email_and_password">Email and password</string>
+
+    <string name="facebook_app_id">959535604670956</string>
+    <string name="fb_login_protocol_scheme">fb959535604670956</string>
+<!--    if default_web_client_id is unresolved reference-->
+<!--  SHA-1: 35:33:1C:1B:54:6B:77:10:0B:01:0D:50:B1:2F:D7:E3:B0:70:95:D9  -->
+    <string name="default_web_client_id2" translatable="false">911950557955-chi2dr2iagi0ovj936chr0hnc55gsmj0.apps.googleusercontent.com</string>
+<!---->
+
     
     <string-array name="edit_gender">
         <item>Male</item>
         <item>Female</item>
         <item>Other</item>
     </string-array>
+
 </resources>

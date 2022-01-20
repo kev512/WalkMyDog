@@ -34,6 +34,7 @@ class LoginActivity : AppCompatActivity() {
         //check authentication
         if(fAuth.currentUser != null){
             startActivity(Intent(applicationContext, MainActivity::class.java))
+            finish()
         }
 
         mLoginBtn.setOnClickListener {

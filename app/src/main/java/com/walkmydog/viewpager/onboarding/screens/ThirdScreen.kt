@@ -18,6 +18,7 @@ import android.content.Intent
 import com.walkmydog.MainActivity
 import com.walkmydog.authentication.LoginMethod
 import com.walkmydog.databinding.ActivityMainBinding
+import kotlinx.android.synthetic.main.fragment_third_screen.*
 import kotlinx.coroutines.Dispatchers.Main
 
 
@@ -43,6 +44,7 @@ class ThirdScreen : Fragment() {
             val intent = Intent (getActivity(), LoginMethod::class.java)
             getActivity()?.startActivity(intent)
             onBoardingFinished()
+
         }
         return view
     }
