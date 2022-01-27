@@ -40,7 +40,7 @@ class ProfileFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val rootView: View = inflater.inflate(R.layout.profile_fragment, container, false)
-
+        val email: String? = FirebaseAuth.getInstance().currentUser?.email
         fAuth = FirebaseAuth.getInstance()
 
         //Logout button
@@ -64,8 +64,7 @@ class ProfileFragment : Fragment() {
 
         //testing box
         val textBox: TextView = rootView.findViewById(R.id.testBoxForStrings)
-        val UserId: String = fAuth.currentUser!!.uid
-        textBox.setText(UserId)
+        textBox.setText(email)
 
 
         //Add pooch button

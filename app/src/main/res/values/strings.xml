@@ -53,7 +53,11 @@
 <!--    if default_web_client_id is unresolved reference-->
 <!--  SHA-1: 35:33:1C:1B:54:6B:77:10:0B:01:0D:50:B1:2F:D7:E3:B0:70:95:D9  -->
     <string name="default_web_client_id2" translatable="false">911950557955-chi2dr2iagi0ovj936chr0hnc55gsmj0.apps.googleusercontent.com</string>
-<!---->
+    <string name="you_don_t_have_any_messages">You don\'t have any messages</string>
+    <string name="when_you_contact_another_app_user_this_is_where_you_ll_see_your_messages">When you contact another app user, this is where you\'ll see your messages</string>
+    <string name="my_inbox">My inbox</string>
+    <string name="inbox">You don\'t have any messages</string>
+    <!---->
 
     
     <string-array name="edit_gender">

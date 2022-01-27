@@ -4,58 +4,103 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.profile.ProfileFragment">
+    tools:context=".ui.profile.ProfileFragment"
+    android:background="@drawable/ic_shapes_background">
+
+
+    <TextView
+        android:id="@+id/PROFILE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Profile"
+        android:textColor="#0288D1"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.692" />
 
     <TextView
         android:id="@+id/testBoxForStrings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="Hello"
-        android:textSize="32sp"
+        android:text="Profile"
+        android:textColor="#0288D1"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/changePersonalDataBtnActivity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/logoutButton"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="22dp"
+        android:background="@drawable/button_pink"
+        android:text="Sign out"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/changePasswordBtnActivity"
+        app:layout_constraintVertical_bias="0.031" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/AddPoochBtnActivity"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="22dp"
+        android:background="@drawable/button_pink"
+        android:text="Add new dog"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/changePersonalDataBtnActivity" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/changePasswordBtnActivity"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="22dp"
+        android:background="@drawable/button_pink"
+        android:text="Change password"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AddPoochBtnActivity" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/changePersonalDataBtnActivity"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="384dp"
+        android:background="@drawable/button_pink"
+        android:text="Personal data"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/logoutButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="60dp"
-        android:text="Sign out"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="162dp"
+        android:layout_height="156dp"
+        android:layout_marginTop="152dp"
+        android:src="@drawable/cool_dog"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/AddPoochBtnActivity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="Add new dog"
-        app:layout_constraintBottom_toTopOf="@+id/changePasswordBtnActivity"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/changePasswordBtnActivity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="Change password"
-        app:layout_constraintBottom_toTopOf="@+id/logoutButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/changePersonalDataBtnActivity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="Personal data"
-        app:layout_constraintBottom_toTopOf="@+id/AddPoochBtnActivity"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

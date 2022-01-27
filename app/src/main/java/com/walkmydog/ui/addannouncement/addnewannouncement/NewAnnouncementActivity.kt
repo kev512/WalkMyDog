@@ -36,6 +36,7 @@ class NewAnnouncementActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportActionBar?.hide()
         setContentView(R.layout.activity_new_announcement)
 
         mDogName = findViewById(R.id.dogName)
@@ -43,8 +44,8 @@ class NewAnnouncementActivity : AppCompatActivity() {
         mAdditionalInfo = findViewById(R.id.additionalInformation)
         mSaveAnnouncement = findViewById(R.id.saveNewAnnouncementBtn)
 
-        mShowMeThings = findViewById(R.id.boxToThings)
-        mShowMeThings2 = findViewById(R.id.boxToThings2)
+//        mShowMeThings = findViewById(R.id.boxToThings)
+//        mShowMeThings2 = findViewById(R.id.boxToThings2)
 
 
 
