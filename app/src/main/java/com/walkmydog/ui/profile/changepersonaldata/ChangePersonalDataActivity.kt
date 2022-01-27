@@ -54,7 +54,7 @@ class ChangePersonalDataActivity : AppCompatActivity() {
         mGender = findViewById(R.id.editGender)
 
 
-        mShowMeUsers = findViewById(R.id.showMeUser)
+//        mShowMeUsers = findViewById(R.id.showMeUser)
 
 
 
